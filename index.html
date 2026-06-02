@@ -3,94 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Nav - Desktop First</title>
+    <title>Responsive Nav - Flexbox Edition</title>
     <style>
-
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         a {
             text-decoration: none;
         }
 
         nav {
-            padding: 0 24px;
             width: 100%;
-            height: 64px;
-            line-height: 64px;
+            min-height: 64px;
             background: #001635;
-            overflow: hidden; 
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
         }
+        
         .logo {
             color: #D2DAE7;
             font-size: 20px;
             font-weight: 700;
-            float: left;
         }
+
         ul {
             list-style: none;
-            float: right; 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
         }
-        ul > li {
-            display: inline-block;
-            margin-left: 24px;
-        }
+
         li > a {
             color: #D2DAE7;
             font-size: 15px;
             transition: color 0.3s;
         }
+
         li > a:hover {
             color: #ffffff;
         }
 
         @media (max-width: 1024px) {
             nav {
-                height: auto; 
-                padding: 16px 24px;
-            }
-            .logo {
-                float: none; 
-                display: block;
-                height: auto;
-                line-height: normal;
-                margin-bottom: 16px;
+                flex-direction: column;
+                align-items: flex-start; 
+                padding: 24px;
+                gap: 24px;
             }
             ul {
-                float: none; 
-                clear: both;
+                flex-direction: column;
+                width: 100%;
+                gap: 12px;
             }
+
             ul > li {
-                display: block; 
-                margin-left: 0;
-                margin-bottom: 12px;
+                width: 100%;
             }
-            ul > li:last-child {
-                margin-bottom: 0;
-            }
-            li > a {
-                display: block;
-                padding: 4px 0;
-            }
+
         }
 
-        @media (max-width: 767px) {
-            nav{
-                height: 32px;
-                line-height: 32px;
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                min-height: 32px;
+                padding: 0 12px;
+                align-items: center;
             }
             .logo {
-                display: inline-block;
-                font-size: 9px;
+                font-size: 12px;
             }
             ul{
-                float: right;
-            }
-            ul > li {
-                display: inline-block;
-                margin-left: 12px;
-                
+                flex-direction: row;
+                align-items: center;
+                gap: 16px;
+                width: auto;
             }
             li > a {
                 font-size: 9px;
