@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav - Desktop First</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            padding: 0 24px;
+            width: 100%;
+            height: 64px;
+            line-height: 64px;
+            background: #001635;
+            overflow: hidden; 
+        }
+        .logo {
+            color: #D2DAE7;
+            font-size: 20px;
+            font-weight: 700;
+            float: left;
+        }
+        ul {
+            list-style: none;
+            float: right; 
+        }
+        ul > li {
+            display: inline-block;
+            margin-left: 24px;
+        }
+        li > a {
+            color: #D2DAE7;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+        li > a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 1024px) {
+            nav {
+                height: auto; 
+                padding: 16px 24px;
+            }
+            .logo {
+                float: none; 
+                display: block;
+                height: auto;
+                line-height: normal;
+                margin-bottom: 16px;
+            }
+            ul {
+                float: none; 
+                clear: both;
+            }
+            ul > li {
+                display: block; 
+                margin-left: 0;
+                margin-bottom: 12px;
+            }
+            ul > li:last-child {
+                margin-bottom: 0;
+            }
+            li > a {
+                display: block;
+                padding: 4px 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            nav{
+                height: 32px;
+                line-height: 32px;
+            }
+            .logo {
+                display: inline-block;
+                font-size: 9px;
+            }
+            ul{
+                float: right;
+            }
+            ul > li {
+                display: inline-block;
+                margin-left: 12px;
+                
+            }
+            li > a {
+                font-size: 9px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">
+                THEMES
+            </span>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Orders</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Customer</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
