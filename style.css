@@ -1,14 +1,10 @@
 
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
-a {
-    text-decoration: none;
-}
 
-nav {
+#navbar {
     width: 100%;
     min-height: 64px;
     background: #001635;
@@ -18,13 +14,13 @@ nav {
     align-items: center; 
 }
 
-.logo {
+#navbar .logo {
     color: #D2DAE7;
     font-size: 20px;
     font-weight: 700;
 }
 
-ul {
+#navbar > ul {
     list-style: none;
     display: flex; 
     align-items: center;
@@ -32,13 +28,14 @@ ul {
     gap: 24px;
 }
 
-li > a {
+#navbar li > a {
+    text-decoration: none;
     color: #D2DAE7;
     font-size: 15px;
     transition: color 0.3s;
 }
 
-li > a:hover {
+#navbar li > a:hover {
     color: #ffffff;
 }
 
@@ -73,13 +70,13 @@ li > a:hover {
 
 
 @media (max-width: 1024px) {
-    nav {
+    #navbar {
         flex-direction: column;
         align-items: flex-start; 
         padding: 24px;
         gap: 24px;
     }
-    ul {
+    #navbar > ul {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
@@ -87,21 +84,21 @@ li > a:hover {
 }
 
 @media (max-width: 768px) {
-    nav {
+    #navbar {
         flex-direction: row;
         min-height: 32px;
         padding: 0 12px;
         align-items: center;
     }
-    .logo {
+    #navbar > .logo {
         font-size: 12px;
     }
-    ul{
+    #navbar > ul{
         flex-direction: row;
         align-items: center;
         gap: 16px;
     }
-    li > a {
+    #navbar li > a {
         font-size: 9px;
     }
     
